@@ -1,0 +1,13 @@
+extends ./base.jade
+
+block content
+	div#primary.content-area
+		main#main.site-main
+
+			section(class='error-404 not-found')
+				header.page-header
+					h1.page-title= i18n.__("Упс! Произошла какая-то ошибка")
+
+				div.page-content
+					p 
+						a(href='./') Вы можете перейти на главную и продолжить просмотр сайта.

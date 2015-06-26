@@ -1,0 +1,62 @@
+doctype html
+html.no-js
+	head
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width')
+		link(rel="profile", href="http://gmpg.org/xfn/11")
+		<!--[if lt IE 9]>
+		script(src='./js/html5.js')
+		<![endif]-->
+		script (function(){document.documentElement.className='js'})();
+		block title
+			title Izotova Art
+		block template-head
+			link#genericons-css(rel='stylesheet', href='./genericons/genericons.css?ver=3.2', type='text/css', media='all')
+			link#twentyfifteen-style-css(rel='stylesheet',  href='./style.css?ver=4.1.1', type='text/css', media='all')
+			<!--[if lt IE 9]>
+			link#twentyfifteen-ie-css(rel='stylesheet', href='./css/ie.css?ver=20141010', type='text/css', media='all')
+			<![endif]-->
+			<!--[if lt IE 8]>
+			link#twentyfifteen-ie7-css(rel='stylesheet', href='./css/ie7.css?ver=20141010', type='text/css', media='all')
+			<![endif]-->
+			script(type='text/javascript', src='http://ruslan.ibragimov.by/wp-includes/js/jquery/jquery.js?ver=1.11.1')
+			script(type='text/javascript', src='http://ruslan.ibragimov.by/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1')
+
+	body(class='home blog custom-background')
+		div#page.hfeed.site
+			a.skip-link.screen-reader-text(href='#content') Skip to content
+
+			div#sidebar.sidebar
+				header#masthead.site-header(role='banner')
+					div.site-branding
+						h1.site-title
+							a(href='./', rel='home') Izotova Natalie
+						p.site-description Best Photographer Ever
+						button.secondary-toggle Menu and widgets
+				block sidebar
+					div#secondary.secondary
+						nav#social-navigation.social-navigation(role='navigation')
+							div.menu-social-container
+								ul#menu-social.menu
+									li(class='menu-item menu-item-type-custom menu-item-object-custom menu-item-1164')
+										a(href="http://linkedin.com/pub/ruslan-ibragimov/68/791/20/")
+											span(class="screen-reader-text") LinkedIn
+									li(class='menu-item menu-item-type-custom menu-item-object-custom menu-item-1165')
+										a(href="https://github.com/IRus")
+											span(class="screen-reader-text") GitHub
+									li(class='menu-item menu-item-type-custom menu-item-object-custom menu-item-1167')
+										a(href="http://ruslan.ibragimov.by/whoami")
+											span(class="screen-reader-text") I
+
+			div#content.site-content
+				block content
+
+			block footer	
+				footer#colophon.site-footer(role='contentinfo')
+					div.site-info
+						a(href='https://wordpress.org/') Proudly powered by WordPress
+
+		block template-footer
+			script(type='text/javascript', src='./js/skip-link-focus-fix.js?ver=20141010')
+			script(type='text/javascript') /* <![CDATA[ */ var screenReaderText = {"expand":"<span class=\"screen-reader-text\">expand child menu<\/span>","collapse":"<span class=\"screen-reader-text\">collapse child menu<\/span>"}; /* ]]> */
+			script(type='text/javascript', src='./js/functions.js?ver=20141212')

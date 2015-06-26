@@ -1,0 +1,9 @@
+language: java
+
+jdk:
+  - oraclejdk8
+
+notifications:
+  webhooks:
+    urls:
+      - https://webhooks.gitter.im/e/52b6cb7b8c0c3dac975c
