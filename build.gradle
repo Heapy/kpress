@@ -1,4 +1,0 @@
-task wrapper(type: Wrapper) {
-    gradleVersion = "2.3"
-    distributionUrl = 'http://services.gradle.org/distributions/gradle-2.4-bin.zip'
-}

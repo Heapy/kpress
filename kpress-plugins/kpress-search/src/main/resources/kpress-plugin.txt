@@ -1,0 +1,1 @@
+by.heap.kpress.plugins.search.SearchPlugin

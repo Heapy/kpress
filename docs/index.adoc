@@ -1,0 +1,4 @@
+= Kpress documentation
+
+include::architecture.adoc[]
+

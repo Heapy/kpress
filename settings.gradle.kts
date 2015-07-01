@@ -1,0 +1,12 @@
+include(
+    "kpress-engine",
+    "kpress-api",
+    "kpress-ui",
+    "kpress-plugins:kpress-search",
+    "kpress-themes:kpress-theme-plain",
+    "kpress-themes:kpress-theme-twentyfifteen",
+    "kpress-themes:kpress-theme-twentysixteen",
+    "kpress-themes:kpress-theme-docs",
+    "kpress-import:wordpress",
+    "kpress-import:wordpress-api"
+)

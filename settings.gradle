@@ -1,5 +1,0 @@
-include "jpress-engine"
-include "jpress-api"
-include "jpress-theme-jfifteen"
-include "jpress-search"
-include "jpress-theme-jfifteen-jade"

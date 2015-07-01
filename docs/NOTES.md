@@ -1,0 +1,6 @@
+- [ ] https://make.wordpress.org/polyglots/handbook/
+- [ ] https://codex.wordpress.org/%D0%9D%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5_%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD%D0%B0
+- [ ] https://developer.wordpress.org/themes/basics/template-hierarchy/
+- [ ] https://codex.wordpress.org/Function_Reference/get_footer
+- [ ] https://i.stack.imgur.com/RDPZt.png
+- [ ] https://codex.wordpress.org/Plugin_API
