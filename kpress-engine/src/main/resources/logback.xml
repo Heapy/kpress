@@ -6,7 +6,7 @@
     </appender>
 
     <logger name="org.freemarker" level="TRACE"/>
-    <logger name="kpress" level="TRACE"/>
+    <logger name="by.heap.kpress" level="TRACE"/>
 
     <root level="DEBUG">
         <appender-ref ref="CONSOLE" />
