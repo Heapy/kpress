@@ -4,27 +4,20 @@ import org.jetbrains.kotlin.gradle.dsl.KotlinJvmCompile
 import org.jetbrains.kotlin.gradle.plugin.KotlinPlatformJvmPlugin
 
 plugins {
-    application
     kotlin("jvm") version "1.2.61"
 }
 
 val undertowVersion: String by project
 val kotlinHtmlVersion: String by project
-val slf4jVersion: String by project
 val coroutinesVersion: String by project
 val jacksonVersion: String by project
-val ymlICalVersion: String by project
 val httpClientVersion: String by project
 val romeVersion: String by project
 val commonmarkVersion: String by project
+val freemarkerVersion: String by project
+val asciidoctorVersion: String by project
 
-val sentryVersion: String by project
 val logbackVersion: String by project
-
-val hikariVersion: String by project
-val postgresqlVersion: String by project
-val jooqVersion: String by project
-val flywayVersion: String by project
 
 val junitVersion: String by project
 val mockkVersion: String by project
@@ -61,36 +54,50 @@ project(":kpress-engine") {
         compile(kotlin("reflect"))
 
         compile(project(":kpress-api"))
-        compile(project(":kpress-themes:kpress-theme-docs"))
+        runtimeOnly(project(":kpress-themes:kpress-theme-ruslan"))
 
-        compile("commons-io:commons-io:2.4")
         compile("ch.qos.logback:logback-classic:$logbackVersion")
 
-        compile("org.asciidoctor:asciidoctorj:1.5.4.1")
-        compile("org.freemarker:freemarker:2.3.23")
+        compile("org.asciidoctor:asciidoctorj:$asciidoctorVersion")
+        compile("org.freemarker:freemarker:$freemarkerVersion")
 
         compile("io.undertow:undertow-core:$undertowVersion")
 
-        compile("org.apache.httpcomponents:fluent-hc:4.5.2")
+        compile("org.apache.httpcomponents:fluent-hc:$httpClientVersion")
+    }
+}
+
+// PLUGINS
+
+project(":kpress-plugins:kpress-plugin-api") {
+    dependencies {
+        compile(project(":kpress-api"))
     }
 }
 
 project(":kpress-plugins:kpress-search") {
     dependencies {
+        compile(project(":kpress-plugins:kpress-plugin-api"))
+    }
+}
+
+// THEMES
+
+project(":kpress-themes:kpress-theme-api") {
+    dependencies {
         compile(project(":kpress-api"))
     }
 }
 
-project(":kpress-themes:kpress-theme-docs") {
+project(":kpress-themes:kpress-theme-ruslan") {
     dependencies {
-        compile(project(":kpress-api"))
-        compile("org.jetbrains.kotlinx:kotlinx-html-jvm:$kotlinHtmlVersion")
+        compile(project(":kpress-themes:kpress-theme-api"))
     }
 }
 
 project(":kpress-themes:kpress-theme-twentysixteen") {
     dependencies {
-        compile(project(":kpress-api"))
+        compile(project(":kpress-themes:kpress-theme-api"))
         compile("org.jetbrains.kotlinx:kotlinx-html-jvm:$kotlinHtmlVersion")
     }
 }
