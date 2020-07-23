@@ -11,3 +11,6 @@ build
 
 # Common files
 *.log
+
+# Samples
+/samples

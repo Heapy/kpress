@@ -1,1 +1,1 @@
-by.heap.kpress.plugins.search.SearchPlugin
+io.heapy.kpress.plugins.search.SearchPlugin

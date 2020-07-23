@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "1.2.61"
+    `kotlin-dsl`
 }
 
 repositories {
@@ -7,5 +7,5 @@ repositories {
 }
 
 dependencies {
-    compile(kotlin("stdlib-jdk8"))
+    implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.72")
 }

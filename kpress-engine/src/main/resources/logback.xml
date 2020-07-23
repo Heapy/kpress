@@ -5,10 +5,13 @@
         </encoder>
     </appender>
 
-    <logger name="org.freemarker" level="TRACE"/>
-    <logger name="by.heap.kpress" level="TRACE"/>
+    <!--<logger name="org.xnio" level="ERROR"/>-->
+    <!--<logger name="io.undertow" level="ERROR"/>-->
 
-    <root level="DEBUG">
+    <!--<logger name="io.heapy.kpress.koin" level="ERROR"/>-->
+    <logger name="io.heapy.kpress" level="TRACE"/>
+
+    <root level="TRACE">
         <appender-ref ref="CONSOLE" />
     </root>
 </configuration>
