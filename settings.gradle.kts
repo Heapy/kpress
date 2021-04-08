@@ -6,11 +6,13 @@ include(
 
     "kpress-themes:kpress-theme-api",
     "kpress-themes:kpress-theme-ruslan",
-    "kpress-themes:kpress-theme-twentysixteen",
+//    "kpress-themes:kpress-theme-twentysixteen",
 
     "kpress-engine",
     "kpress-ui",
 
     "kpress-import:wordpress",
-    "kpress-import:wordpress-api"
+    "kpress-import:wordpress-api",
+
+    "kpress-gradle-plugin"
 )

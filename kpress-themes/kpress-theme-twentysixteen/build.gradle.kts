@@ -1,4 +1,4 @@
-import io.heapy.kpress.gradle.Libs
+import io.heapy.kpress.gradle.*
 
 plugins {
     id("io.heapy.module")
@@ -6,5 +6,4 @@ plugins {
 
 dependencies {
     implementation(project(":kpress-themes:kpress-theme-api"))
-    implementation(Libs.htmlDsl)
 }

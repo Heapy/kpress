@@ -1,9 +1,9 @@
 package io.heapy.kpress
 
 import io.heapy.kpress.extensions.logger
-import io.heapy.kpress.koin.startKpress
 import kotlinx.coroutines.runBlocking
-import kotlin.system.measureTimeMillis
+import java.time.Duration
+import kotlin.system.measureNanoTime
 
 /**
  * Entry point of application.
@@ -14,15 +14,15 @@ import kotlin.system.measureTimeMillis
 object Application {
     @JvmStatic
     fun main(args: Array<String>) = runBlocking {
-        val time = measureTimeMillis {
+        val time = measureNanoTime {
             try {
-                startKpress<Main>(kpress) { start() }
+                ApplicationModule().main.start()
             } catch (e: Throwable) {
-                Application.LOGGER.error("An exception occurred.", e)
+                LOGGER.error("An exception occurred.", e)
             }
         }
 
-        Application.LOGGER.info("Spent time: ${time / 1000}s")
+        LOGGER.info("Spent time: ${Duration.ofNanos(time).seconds}s")
     }
 
     private val LOGGER = logger<Application>()

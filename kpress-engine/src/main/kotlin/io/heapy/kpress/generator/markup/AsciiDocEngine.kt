@@ -1,13 +1,13 @@
 package io.heapy.kpress.generator.markup
 
-import io.heapy.kpress.extensions.elastic
-import io.heapy.kpress.extensions.elasticContext
 import io.heapy.kpress.extensions.logger
 import io.heapy.kpress.model.Model
 import io.heapy.kpress.services.ShutdownManager
 import kotlinx.coroutines.CoroutineStart
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.async
+import kotlinx.coroutines.withContext
 import org.asciidoctor.Asciidoctor
 import org.asciidoctor.OptionsBuilder
 
@@ -35,14 +35,14 @@ class AsciiDocEngine(
         }
     }
 
-    private val asciidoctor = GlobalScope.async(elasticContext, start = CoroutineStart.LAZY) {
+    private val asciidoctor = GlobalScope.async(Dispatchers.IO, start = CoroutineStart.LAZY) {
         LOGGER.info("Creating asciidoctor... May take a while")
         Asciidoctor.Factory.create().also {
             LOGGER.info("Allons-y! Asciidoctor ${it.asciidoctorVersion()} created!")
         }
     }
 
-    override suspend fun convert(model: Model, content: String): String = elastic {
+    override suspend fun convert(model: Model, content: String): String = withContext(Dispatchers.IO) {
         val optionsBuilder = OptionsBuilder.options().inPlace(false)
         asciidoctor.await().convert(content, optionsBuilder)
     }

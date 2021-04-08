@@ -1,7 +1,7 @@
 package io.heapy.kpress.services
 
-import io.heapy.kpress.extensions.elasticContext
 import io.heapy.kpress.extensions.logger
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.runBlocking
 import java.util.concurrent.atomic.AtomicBoolean
@@ -51,7 +51,7 @@ class DefaultShutdownManager : ShutdownManager {
 
         runBlocking {
             callbacks.map {
-                async(elasticContext) {
+                async(Dispatchers.IO) {
                     try {
                         LOGGER.info("Stopping ${it.first}...")
                         it.second()
@@ -61,12 +61,6 @@ class DefaultShutdownManager : ShutdownManager {
                     }
                 }
             }.forEach { it.await() }
-
-            run {
-                LOGGER.info("Stopping elasticContext...")
-                elasticContext.close()
-                LOGGER.info("ElasticContext stopped")
-            }
         }
 
         LOGGER.info("Kpress stopped")

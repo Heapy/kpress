@@ -1,11 +1,15 @@
 name: "Build"
-on: [push]
+on:
+  - "push"
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        jdk: [8, 11, 15]
+        jdk:
+          - 8
+          - 11
+          - 15
     steps:
       - uses: actions/checkout@v2
       - name: "Set up JDK 11"
