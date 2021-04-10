@@ -19,7 +19,12 @@ class KpressModulePlugin : Plugin<Project> {
         }
 
         tasks.withType<KotlinJvmCompile>().configureEach {
-            kotlinOptions.jvmTarget = "1.8"
+            kotlinOptions {
+                jvmTarget = "1.8"
+                languageVersion = "1.5"
+                apiVersion = "1.5"
+                useIR = true
+            }
         }
 
         tasks.withType<Test>().configureEach {

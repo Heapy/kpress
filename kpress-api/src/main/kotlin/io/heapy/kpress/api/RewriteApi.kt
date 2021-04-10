@@ -6,6 +6,6 @@ package io.heapy.kpress.api
  * https://codex.wordpress.org/Rewrite_API
  *
  * @author Ruslan Ibragimov
- * @since 1.0
+ * @since 0.1
  */
 interface RewriteApi

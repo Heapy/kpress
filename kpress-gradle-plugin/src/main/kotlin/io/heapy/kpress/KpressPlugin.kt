@@ -14,7 +14,7 @@ import org.gradle.api.tasks.SourceSet
  * https://github.com/gradle/gradle/blob/master/subprojects/plugins/src/main/java/org/gradle/api/plugins/ApplicationPlugin.java
  *
  * @author Ruslan Ibragimov
- * @since 1.0
+ * @since 0.1
  */
 class KpressPlugin : Plugin<Project> {
 

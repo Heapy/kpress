@@ -4,7 +4,7 @@ package io.heapy.kpress.api
  * TODO.
  *
  * @author Ibragimov Ruslan
- * @since TODO
+ * @since 0.1
  */
 interface Model {
     val baseUrl: String

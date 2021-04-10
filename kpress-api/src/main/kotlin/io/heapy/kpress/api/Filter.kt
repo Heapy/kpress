@@ -29,7 +29,7 @@ package io.heapy.kpress.api
  * so everything is as quick as possible.
  *
  * @author Ruslan Ibragimov
- * @since 1.0
+ * @since 0.1
  */
 interface Filter<T> {
 

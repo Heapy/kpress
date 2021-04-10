@@ -7,7 +7,7 @@ import java.util.EventListener
  * Base class for implementing by plugin developers.
  *
  * @author Ruslan Ibragimov
- * @since 1.0
+ * @since 0.1
  */
 interface Plugin {
 

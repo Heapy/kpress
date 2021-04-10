@@ -7,7 +7,7 @@ import java.util.EventListener
  * Search plugin
  *
  * @author Ruslan Ibragimov
- * @since 1.0
+ * @since 0.1
  */
 class SearchPlugin : Plugin {
 

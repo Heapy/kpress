@@ -16,4 +16,8 @@ dependencies {
     implementation(asciidoctorj)
     implementation(undertow)
     implementation(fluentHc)
+
+    implementation(commonmark)
+    implementation(commonmarkFrontMatter)
+    implementation(commonmarkHeadingAnchor)
 }

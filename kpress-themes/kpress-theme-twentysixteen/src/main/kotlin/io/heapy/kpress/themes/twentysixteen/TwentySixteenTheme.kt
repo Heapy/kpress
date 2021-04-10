@@ -7,7 +7,7 @@ import io.heapy.kpress.theme.api.Theme
  * Port of wordpress twentysixteen theme for docs.
  *
  * @author Ibragimov Ruslan
- * @since 1.0
+ * @since 0.1
  */
 class TwentySixteenTheme : Theme {
     override val name = TwentySixteenTheme.name

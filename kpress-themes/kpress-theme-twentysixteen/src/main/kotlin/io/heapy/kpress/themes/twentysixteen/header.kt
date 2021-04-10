@@ -8,7 +8,7 @@ import kotlinx.html.script
  * TODO.
  *
  * @author Ibragimov Ruslan
- * @since Twenty Sixteen 1.0
+ * @since 0.1
  */
 fun HTML.getHeader() {
     head {

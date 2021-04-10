@@ -8,7 +8,7 @@ import kotlin.reflect.KClass
  * For example podcast plugin can save results of calculations of audio length.
  *
  * @author Ruslan Ibragimov
- * @since 1.0
+ * @since 0.1
  */
 interface Database {
 

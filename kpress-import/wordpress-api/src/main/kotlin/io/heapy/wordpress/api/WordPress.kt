@@ -7,7 +7,7 @@ package io.heapy.wordpress.api
  * https://developer.wordpress.org/rest-api/
  *
  * @author Ruslan Ibragimov
- * @since 1.0
+ * @since 0.1
  */
 class WordPress {
 }

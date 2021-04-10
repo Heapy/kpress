@@ -12,7 +12,7 @@ include(
     "kpress-ui",
 
     "kpress-import:wordpress",
-    "kpress-import:wordpress-api",
+    "kpress-import:wordpress-api"
 
-    "kpress-gradle-plugin"
+//    "kpress-gradle-plugin"
 )

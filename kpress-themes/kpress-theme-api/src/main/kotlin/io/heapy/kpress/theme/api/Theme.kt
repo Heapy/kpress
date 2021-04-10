@@ -7,7 +7,7 @@ import io.heapy.kpress.api.Model
  * all themes available in classpath.
  *
  * @author Ruslan Ibragimov
- * @since 1.0
+ * @since 0.1
  */
 interface Theme {
     val name: String

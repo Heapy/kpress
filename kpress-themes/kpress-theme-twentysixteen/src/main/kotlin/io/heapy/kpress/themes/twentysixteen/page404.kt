@@ -20,7 +20,7 @@ import kotlinx.html.section
  * The template for displaying 404 pages (not found)
  *
  * @author Ibragimov Ruslan
- * @since Twenty Sixteen 1.0
+ * @since 0.1
  */
 fun page404Impl(model: Model): String {
     return document {
